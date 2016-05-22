@@ -5,12 +5,18 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <string.h>
 
-int main(int argc, const char * argv[]) {    
+int main(int argc, const char * argv[]) {        
+    if (argc < 2) {
+        printf("error: command argument missing\n");
+        exit(EXIT_FAILURE);
+    }    
+    
     printf("Sending AnyBar command...\n");
     
     int clientSocket;
