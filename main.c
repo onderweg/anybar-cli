@@ -17,15 +17,15 @@ int main(int argc, const char * argv[]) {
         exit(EXIT_FAILURE);
     }        
 
-    int port = (argc == 3) ? strtol(argv[2], NULL, 0) : 1738;
-
-    printf("Sending AnyBar command to port %i...\n", port);    
-
+    int port = (argc == 3) ? strtol(argv[2], NULL, 0) : 1738;    
     int clientSocket;
     const char* message = argv[1];
     struct sockaddr_in serverAddr;
     socklen_t addr_size;
     
+    /* Print information message */
+    printf("Sending AnyBar command '%s' to port %i...\n", argv[1], port);    
+
     /* Create UDP socket */
     clientSocket = socket(PF_INET, SOCK_DGRAM, 0);
     
@@ -41,5 +41,8 @@ int main(int argc, const char * argv[]) {
     /* Send UDP message to AnyBar */
     sendto(clientSocket, message, strlen(message),0,(struct sockaddr *)&serverAddr,addr_size);
     
+    // Note: being a stateless protocol, UDP provides no mechanism 
+    // for checking whether its datagrams arrive.    
+
     return 0;
 }
