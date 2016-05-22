@@ -8,3 +8,4 @@ A minimal C command line client for [AnyBar](https://github.com/tonsky/AnyBar).
     $ anybar-cli green    
     $ anybar-cli blue    
     $ anybar-cli exclamation
+    $ anybar-cli orange 1740 # user port 1740
