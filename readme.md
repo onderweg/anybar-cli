@@ -1,4 +1,4 @@
-#README
+# README
 
 A minimal C command line client for [AnyBar](https://github.com/tonsky/AnyBar).
 
