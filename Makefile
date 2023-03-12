@@ -1,2 +1,2 @@
  all: main.c
-		gcc main.c -o anybar-cli
+	gcc main.c -o anybar-cli

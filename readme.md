@@ -1,4 +1,4 @@
-# README
+# Anybar-cli
 
 A minimal C command line client for [AnyBar](https://github.com/tonsky/AnyBar).
 
@@ -6,7 +6,7 @@ A minimal C command line client for [AnyBar](https://github.com/tonsky/AnyBar).
 
 	anybar-cli <command> [port]
 
-By default, anybar-cli assumes that Anybar is bound to localhost on UDP port 1738.	
+By default, `anybar-cli` assumes that Anybar is bound to localhost on UDP port `1738`.	
 
 Examples:
 
